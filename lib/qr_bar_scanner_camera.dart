@@ -138,14 +138,12 @@ class QRBarScannerCameraState extends State<QRBarScannerCamera>
               Widget preview = SizedBox(
                 width: constraints.maxWidth,
                 height: constraints.maxHeight,
-                // child: Preview(
-                //   previewDetails: details.data!,
-                //   // targetWidth: constraints.maxWidth,
-                //   // targetHeight: constraints.maxHeight,
-                //   targetWidth: 200,
-                //   targetHeight: 200,
-                //   fit: widget.fit,
-                // ),
+                child: Preview(
+                  previewDetails: details.data!,
+                  targetWidth: constraints.maxWidth,
+                  targetHeight: constraints.maxHeight,
+                  fit: widget.fit,
+                ),
               );
 
               if (widget.child != null) {
@@ -222,8 +220,8 @@ class Preview extends StatelessWidget {
             child: RotatedBox(
               quarterTurns: rotationCompensation,
               child: SizedBox(
-                width: frameWidth,
-                height: frameHeight,
+                width: 100,
+                height: 100,
                 child: Texture(textureId: textureId!),
               ),
             ),
