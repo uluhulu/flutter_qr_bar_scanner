@@ -213,8 +213,8 @@ class Preview extends StatelessWidget {
         int rotationCompensation =
             ((nativeRotation - sensorOrientation! + 450) % 360) ~/ 90;
 
-        double frameHeight = width;
-        double frameWidth = height;
+        double frameHeight = 100;
+        double frameWidth = 100;
 
         return ClipRect(
           child: FittedBox(
