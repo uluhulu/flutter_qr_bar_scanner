@@ -56,7 +56,7 @@ class FlutterQrReader {
     var details = await _channel.invokeMethod('start', {
       'targetWidth': width,
       'targetHeight': height,
-      'heartbeatTimeout': 0,
+      'heartbeatTimeout': 100,
       'formats': formatStrings,
     });
 

@@ -220,8 +220,8 @@ class Preview extends StatelessWidget {
             child: RotatedBox(
               quarterTurns: rotationCompensation,
               child: SizedBox(
-                width: 100,
-                height: 100,
+                width: frameWidth,
+                height: frameHeight,
                 child: Texture(textureId: textureId!),
               ),
             ),
