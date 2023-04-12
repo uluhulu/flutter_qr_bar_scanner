@@ -80,8 +80,10 @@ class QRBarScannerCameraState extends State<QRBarScannerCamera>
   Future<PreviewDetails> _asyncInit(num width, num height) async {
     final devicePixelRatio = MediaQuery.of(context).devicePixelRatio;
     return await FlutterQrReader.start(
-      width: (devicePixelRatio * width.toInt()).ceil(),
-      height: (devicePixelRatio * height.toInt()).ceil(),
+      // width: (devicePixelRatio * width.toInt()).ceil(),
+      // height: (devicePixelRatio * height.toInt()).ceil(),
+      width: 200,
+      height: 200,
       qrCodeHandler: widget.qrCodeCallback,
       formats: widget.formats,
     );
